@@ -1,0 +1,25 @@
+{
+    "@id": "dtmi:digitaltwin:store;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Store",
+    "contents": [
+        {
+            "@type": "Telemetry",
+            "name": "Temperature",
+            "schema": "double"
+         },
+        {
+            "@type": "Relationship",
+            "name": "contains",
+            "displayName": "contains",
+             "target": "dtmi:digitaltwins:cashier;1"
+         },
+         {
+            "@type": "Relationship",
+            "name": "contains",
+            "displayName": "contains",
+             "target": "dtmi:digitaltwins:storeproperties;1"
+         }
+    ]
+}

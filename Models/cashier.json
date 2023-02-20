@@ -1,0 +1,44 @@
+{
+    "@id": "dtmi:digitaltwins:cashier;1",
+     "@type": "Interface",
+     "@context": "dtmi:dtdl:context;2",
+     "displayName": " Cashier",
+     "contents": [
+            {
+              "@type": "Property",
+              "name": "Date",
+              "schema": "integer"
+             },
+        {
+            "@type": "Property",
+            "name": "totalcash",
+            "displayName": "Total Cash",
+             "schema": "integer"
+         },
+        {
+            "@type": "Property",
+            "name": "status",
+             "schema": {
+                "@type": "Enum",
+                "valueSchema": "integer",
+                "enumValues": [
+                  {
+                    "name": "notWorking",
+                    "displayName": "Not Working",
+                    "enumValue": 1
+                  },
+                  {
+                    "name": "working",
+                    "displayName": "Working",
+                    "enumValue": 2
+                  },
+                  {
+                    "name": "maintenance",
+                    "displayName": "under maintenance",
+                    "enumValue": 3
+                  }
+                ]
+              }
+         }
+        ]
+}

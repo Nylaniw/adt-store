@@ -1,0 +1,16 @@
+
+{
+    "@id": "dtmi:digitaltwins:vendo;1",
+     "@type": "Interface",
+     "@context": "dtmi:dtdl:context;2",
+     "displayName": "Vendo",
+     "extends": "dtmi:digitaltwins:storeproperties;1",
+     "contents": [
+        
+         {
+            "@type": "Telemetry",
+            "name": "Temperature",
+            "schema": "double"        
+        }
+        ]
+}

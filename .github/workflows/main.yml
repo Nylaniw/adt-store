@@ -1,0 +1,23 @@
+on: [push]
+name: Azure Bicep
+jobs:
+  deploy-bicep-template:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Deploy Bicep file
+    - name: deploy
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ secrets.AZURE_RG }}
+        parameters: principalId=${{ secrets.AZURE_PRINCIPAL_ID }}
+        template: ./biceps/main.bicep

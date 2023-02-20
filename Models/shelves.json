@@ -1,0 +1,8 @@
+
+{
+     "@id": "dtmi:digitaltwins:shelves;1",
+     "@type": "Interface",
+     "@context": "dtmi:dtdl:context;2",
+     "displayName": "Shelves",
+     "extends": "dtmi:digitaltwins:storeproperties;1"
+}

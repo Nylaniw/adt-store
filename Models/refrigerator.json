@@ -1,0 +1,15 @@
+
+{
+     "@id": "dtmi:digitaltwins:refrigerator;1",
+     "@type": "Interface",
+     "@context": "dtmi:dtdl:context;2",
+     "displayName": "Refrigerator",
+    "extends": "dtmi:digitaltwins:storeproperties;1",
+    "contents": [      
+         {
+                "@type": "Telemetry",
+                "name": "Temperature",
+                "schema": "double"
+         }
+      ]
+}
